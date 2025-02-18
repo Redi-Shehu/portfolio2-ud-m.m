@@ -20,6 +20,7 @@
   --tertiary-color-m: #01727498;
 
   --transition: all 0.3s ease;
+  --spacing: 0.2rem;
 }
 body {
   font-family: "Baloo Tamma 2", cursive;
@@ -81,11 +82,11 @@ aside {
 .side-nav__content--social a i:active {
   color: var(--secondary-color);
 }
-/* -----------------------Main------------------------ */
+/* ------------------MAIN SECTION------------------------ */
 main {
   flex: 1;
 }
-/* -----------Header---------- */
+/* -----------HEADER SECTION---------- */
 header {
   background-color: var(--secondary-color);
   height: calc(3vw + 3vh);
@@ -249,7 +250,7 @@ nav#header__main-nav {
     opacity: 1;
   }
 }
-/* -----------Hero---------- */
+/* -----------HERO SECTION---------- */
 .hero {
   background-color: #014d4e;
   height: 100vh;
@@ -308,7 +309,7 @@ nav#header__main-nav {
   width: 9rem;
   font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: 0.2rem;
+  letter-spacing: var(--spacing);
   text-transform: uppercase;
   position: relative;
   z-index: 5;
@@ -333,5 +334,106 @@ nav#header__main-nav {
   /* transform-origin: right; */
   transform: scaleX(1);
 }
-@media screen and (max-width: 610px) {
+
+/* -----------WORK SECTION---------- */
+section.work {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--tertiary-color);
+}
+.work__card {
+  padding: 2rem;
+  flex-basis: 40rem;
+  flex-grow: 1;
+  clip-path: polygon(
+    20% 0,
+    80% 0,
+    100% 15%,
+    100% 85%,
+    80% 100%,
+    20% 100%,
+    0 85%,
+    0 15%
+  );
+  transition: var(--transition);
+}
+.work__card:hover {
+  filter: sepia(50%);
+}
+/* -----------ABOUT ME SECTION---------- */
+.about-me {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background-color: var(--secondary-color);
+  padding: calc(2rem + 2vw);
+}
+.about-me__img,
+.about-me__content {
+  flex-basis: 40rem;
+  flex-grow: 1;
+  padding: 2rem;
+}
+.about-me__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.about-me__content--title {
+  font-size: 4rem;
+  color: white;
+  text-transform: uppercase;
+
+  position: relative;
+}
+.about-me__content--title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.3rem;
+  width: 10%;
+  background-color: var(--primary-color);
+}
+.about-me__content--title,
+.about-me__content--para {
+  letter-spacing: var(--spacing);
+}
+.about-me__content--para {
+  font-size: 1.8rem;
+  font-family: "Indie Flower", cursive;
+}
+.about-me__content--link:link,
+.about-me__content--link:visited {
+  align-self: flex-start;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: var(--spacing);
+
+  position: relative;
+  z-index: 1;
+}
+.about-me__content--link:link::after,
+.about-me__content--link:visited::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: -1;
+}
+.about-me__content--link:link:hover::after,
+.about-me__content--link:visited:hover::after {
+  transform-origin: top;
+  transform: scaleY(1);
 }
