@@ -25,7 +25,8 @@
 body {
   font-family: "Baloo Tamma 2", cursive;
   line-height: 1.8;
-
+  /* max-width: 1510px;
+  margin: 0 auto; */
   display: flex;
 }
 img {
@@ -431,6 +432,189 @@ section.work {
 }
 .services__service-6--para {
 }
+
+/* -----------SKILLS SECTION---------- */
+.skills {
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  padding: calc(1rem + 2vw);
+  background-color: var(--tertiary-color);
+}
+.skills__design {
+}
+.skills__design--title {
+}
+.skills__design--progress {
+}
+.skills__design,
+.skills__coding {
+  padding: calc(1rem + 2vw);
+  flex-grow: 1;
+  flex-basis: 40rem;
+}
+.skills__design--title,
+.skills__coding--title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.skills__design h4,
+.skills__coding h4 {
+  font-size: 2rem;
+  color: #fff;
+}
+.skills__design--progress,
+.skills__coding--progress {
+  height: 2rem;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  margin-bottom: 2rem;
+  background-color: var(--primary-color);
+  position: relative;
+}
+.skills__design--progress__1,
+.skills__design--progress__2,
+.skills__design--progress__3,
+.skills__design--progress__4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 3rem 0 0 3rem;
+  background-color: var(--secondary-color);
+}
+.skills__design--progress__1 {
+  animation: design-1 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design-1 {
+  0% {
+    width: 0%;
+  }
+  50% {
+  }
+  100% {
+    width: 80%;
+  }
+}
+.skills__design--progress__2 {
+  animation: design-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design-2 {
+  0% {
+    width: 0%;
+  }
+  50% {
+  }
+  100% {
+    width: 70%;
+  }
+}
+.skills__design--progress__3 {
+  animation: design-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design-3 {
+  0% {
+    width: 0%;
+  }
+  50% {
+  }
+  100% {
+    width: 90%;
+  }
+}
+.skills__design--progress__4 {
+  animation: design-4 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design-4 {
+  0% {
+    width: 0%;
+  }
+  50% {
+  }
+  100% {
+    width: 60%;
+  }
+}
+.skills__coding--progress__1,
+.skills__coding--progress__2,
+.skills__coding--progress__3,
+.skills__coding--progress__4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 3rem;
+  background-color: var(--secondary-color);
+}
+.skills__coding {
+}
+.skills__coding--title {
+}
+.skills__coding--progress {
+}
+.skills__coding--progress__1 {
+  animation: coding-1 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+.skills__coding--progress__2 {
+  animation: coding-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+.skills__coding--progress__3 {
+  animation: coding-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+.skills__coding--progress__4 {
+  animation: coding-4 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes coding-1 {
+  0% {
+    width: 0%;
+  }
+  50% {
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes coding-2 {
+  0% {
+    width: 0%;
+  }
+  50% {
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes coding-3 {
+  0% {
+    width: 0%;
+  }
+  50% {
+  }
+  100% {
+    width: 50%;
+  }
+}
+@keyframes coding-4 {
+  0% {
+    width: 0%;
+  }
+  50% {
+  }
+  100% {
+    width: 60%;
+  }
+}
+/*--------------------------------- media 1510px */
+@media screen and (min-width: 1510px) {
+  body {
+    width: 1510px;
+    margin: 0 auto;
+  }
+}
 /*--------------------------------- media 910px */
 @media screen and (max-width: 910px) {
   /* HERO section */
@@ -545,6 +729,15 @@ section.work {
     font-size: calc(1.2rem + 2vw);
   }
   .services__para {
+    font-size: calc(0.8rem + 1.5vw);
+  }
+  /* -----------SKILLS SECTION---------- */
+  .skills__design--title,
+  .skills__coding--title {
+    font-size: calc(1.2rem + 2vw);
+  }
+  .skills__design h4,
+  .skills__coding h4 {
     font-size: calc(0.8rem + 1.5vw);
   }
 }
