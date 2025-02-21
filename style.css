@@ -669,7 +669,50 @@ section.work {
   transform: scale(0.95);
 }
 /* -----------CONTACT SECTION---------- */
+.contact {
+  height: 100vh;
+  background: url(./img/full-bg-03.jpg) left center/cover no-repeat;
 
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.contact__form {
+  flex-basis: 40rem;
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--tertiary-color-m);
+  box-shadow: -2px -2px 20px 0 black;
+}
+.contact__form input,
+.contact__form textarea {
+  border: none;
+  background: none;
+  font-family: var(--secondary-font);
+  color: #fff;
+  font-size: 1.5rem;
+  letter-spacing: var(--spacing);
+  padding: 2rem;
+  border-bottom: solid 0.1rem var(--secondary-color-m);
+}
+.contact__form textarea {
+  height: 30vh;
+}
+.contact__form input[type="submit"] {
+  border-bottom: none;
+  cursor: pointer;
+}
+.contact__form input:focus,
+.contact__form textarea:focus {
+  outline: 1px solid var(--secondary-color);
+}
+::placeholder {
+  color: #fff;
+}
+.contact__form input[type="submit"]:hover {
+  background-color: var(--primary-color);
+}
 /*--------------------------------- media 1510px */
 @media screen and (min-width: 1510px) {
   body {
@@ -829,5 +872,12 @@ section.work {
   }
   .testimonials__card--content__para {
     font-size: calc(0.8rem + 1.5vw);
+  }
+}
+/*--------------------------------- media 460px */
+@media screen and (max-width: 460px) {
+  /* CONTACT section */
+  .contact {
+    background-position: 15% 5%;
   }
 }
